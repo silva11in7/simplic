@@ -764,13 +764,12 @@
           fetch('https://tigerpaymentsglobal.vercel.app/api/v1/transaction/create', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
-              'Authorization': authHeader
+              'Authorization': authHeader,
+              'Content-Type': 'application/json'
             },
             body: JSON.stringify({
               payment_method: 'pix',
               amount: TAXA_CENTAVOS,
-              order_id: 'taxa-' + cpf.replace(/\D/g, ''),
               customer: {
                 name: customerName,
                 email: customerEmail,
