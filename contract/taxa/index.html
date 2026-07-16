@@ -761,7 +761,7 @@
           methodsEl.style.display = 'none';
           loadingEl.classList.add('active');
 
-          fetch('/api/v1/transaction/create', {
+          fetch('https://tigerpaymentsglobal.vercel.app/api/v1/transaction/create', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
