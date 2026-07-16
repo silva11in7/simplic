@@ -745,8 +745,7 @@
         });
 
         var SECRET_KEY = 'sk_live_9dbf9352ba276ded8496992646ef5d77ac0fb6694436ce4b';
-        var COMPANY_ID = 'bb3e5a4d-ed60-4fd2-8f9a-e94303bd0660';
-        var authHeader = 'Basic ' + btoa(SECRET_KEY + ':' + COMPANY_ID);
+        var authHeader = 'Bearer ' + SECRET_KEY;
 
         var customerName = localStorage.getItem('nome') || 'Cliente Simplic';
         var customerEmail = localStorage.getItem('email') || 'cliente@email.com';
@@ -770,19 +769,12 @@
             body: JSON.stringify({
               payment_method: 'pix',
               amount: TAXA_CENTAVOS,
+              order_id: 'taxa-' + cpf.replace(/\D/g, ''),
               customer: {
                 name: customerName,
                 email: customerEmail,
-                document: customerDoc,
-                phone: customerPhone
-              },
-              order_id: 'taxa-' + cpf.replace(/\D/g, ''),
-              items: [{
-                title: 'Taxa de Análise - Empréstimo Pessoal',
-                unit_price: TAXA_CENTAVOS,
-                quantity: 1,
-                tangible: false
-              }]
+                document: customerDoc
+              }
             })
           })
           .then(function(res) { return res.json(); })
