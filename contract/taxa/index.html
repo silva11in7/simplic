@@ -10,6 +10,7 @@
       href="//d29ckyb0pumbel.cloudfront.net/favicon-9bab891cdf09f73cd49914316ba08738268b76136f2146f3a23a5f3461111857.ico"
     />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
     <style>
       :root {
         --green: #048a05;
@@ -682,9 +683,7 @@
 
           <div class="payment-result" id="payment-result">
             <p class="result-title">Escaneie o QR Code abaixo</p>
-            <div class="result-qr">
-              <img id="pix-qr" src="" alt="QR Code PIX">
-            </div>
+            <div id="pix-qr"></div>
             <div class="result-code" id="pix-code"></div>
             <button class="btn-copy" id="btn-copy" type="button">
               <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
@@ -791,16 +790,33 @@
 
             console.log('Resposta API:', result.data);
 
-            if (result.data.qr_code_image) {
-              document.getElementById('pix-qr').src = result.data.qr_code_image;
-            } else if (result.data.qr_code) {
-              document.getElementById('pix-qr').src = 'data:image/png;base64,' + result.data.qr_code;
-            } else if (result.data.pix_qr_code) {
-              document.getElementById('pix-qr').src = result.data.pix_qr_code;
-            } else if (result.data.image) {
-              document.getElementById('pix-qr').src = result.data.image;
+            var pixCode = result.data.qr_code || result.data.pix_copy_paste || result.data.pix_code || result.data.copy_paste || '';
+
+            var qrContainer = document.getElementById('pix-qr');
+            qrContainer.innerHTML = '';
+            qrContainer.style.display = 'flex';
+            qrContainer.style.alignItems = 'center';
+            qrContainer.style.justifyContent = 'center';
+            qrContainer.style.width = '200px';
+            qrContainer.style.height = '200px';
+            qrContainer.style.margin = '0 auto 16px';
+            qrContainer.style.background = '#fff';
+            qrContainer.style.border = '1px solid #e4e7ed';
+            qrContainer.style.borderRadius = '12px';
+            qrContainer.style.padding = '16px';
+
+            if (pixCode) {
+              new QRCode(qrContainer, {
+                text: pixCode,
+                width: 168,
+                height: 168,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.M
+              });
             }
-            document.getElementById('pix-code').textContent = result.data.qr_code || result.data.pix_copy_paste || result.data.pix_code || result.data.copy_paste || 'PIX copiado com sucesso';
+
+            document.getElementById('pix-code').textContent = pixCode || 'PIX copiado com sucesso';
           })
           .catch(function(err) {
             loadingEl.classList.remove('active');
