@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <title>Empréstimo Pessoal Online Sem Burocracia - Simplic</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=5" name="viewport" />
+    <meta
+      content="Empréstimo pessoal online rápido e fácil. Simule o valor e prazo de pagamento. Crédito para negativados aprovado*. Dinheiro em sua conta em até 48 horas."
+      name="description"
+    />
+    <meta content="Homepage" name="page-name" />
+    <meta
+      content="//d29ckyb0pumbel.cloudfront.net/Simplic-logo-og-eac5bfb592f80c4c3880245562604afe3ac345ce5ee68c01d3e175bfa25410cc.png"
+      property="og:image"
+    />
+    <meta content="1200" property="og:image:width" />
+    <meta content="630" property="og:image:height" />
+    <link href="https://www.simplic.online" rel="canonical" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="//d29ckyb0pumbel.cloudfront.net/favicon-9bab891cdf09f73cd49914316ba08738268b76136f2146f3a23a5f3461111857.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      type="image/png"
+      href="//d29ckyb0pumbel.cloudfront.net/favicon-152x152-6cecf2968c05ad10ef2fc9de34da695ef8aa4a94e04624eaca4531b740595396.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      href="//d29ckyb0pumbel.cloudfront.net/favicon-152x152-6cecf2968c05ad10ef2fc9de34da695ef8aa4a94e04624eaca4531b740595396.png"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="//d29ckyb0pumbel.cloudfront.net/application-2dc4fc0abd676bc0b069f593a7510050eaa8e33fbe5a29b7957bd4617ddc44c3.css"
+    />
+  <style>
+    :root {
+      --simplic-green: #048a05;
+      --simplic-green-link: #007c20;
+      --simplic-yellow: #f5bf05;
+      --simplic-yellow-hover: #e5b100;
+      --page-bg: #f5f5f5;
+      --input-bg: #fafafa;
+      --input-border: #d1d1d1;
+      --text: #2c2c2c;
+      --footer-line: #82c582;
+      --content-width: 940px;
+      --card-width: 876px;
+      --step-width: 706px;
+    }
+
+    .form-group.has-error .form-control {
+      border-color: #dc3545 !important;
+      box-shadow: 0 0 0 1px #dc3545;
+    }
+    .field-error {
+      color: #dc3545;
+      font-size: 12px;
+      margin-top: 4px;
+      display: none;
+    }
+    .form-group.has-error .field-error {
+      display: block;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: var(--page-bg);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button, input { font: inherit; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Cabeçalho */
+    .site-header {
+      height: 86px;
+      background: #fff;
+    }
+
+    .site-header__inner {
+      width: min(948px, calc(100% - 40px));
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-header__logo {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+      text-decoration: none;
+    }
+
+    .site-header__logo img {
+      width: auto;
+      height: 63px;
+      margin-left: 9px;
+      transform: translateY(3px);
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      transform: translateY(4px);
+    }
+
+    .site-nav__list {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      list-style: none;
+    }
+
+    .site-nav__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 37px;
+      color: #111;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.9px;
+      line-height: 1;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: color .18s ease, background-color .18s ease;
+    }
+
+    .site-nav__link:hover,
+    .site-nav__link:focus-visible {
+      color: var(--simplic-green);
+      outline: none;
+    }
+
+    .site-nav__link--login {
+      width: 110px;
+      padding: 0 13px;
+      gap: 9px;
+      border-radius: 3px;
+      background: var(--simplic-yellow);
+      color: #111;
+    }
+
+    .site-nav__link--login:hover,
+    .site-nav__link--login:focus-visible {
+      background: var(--simplic-yellow-hover);
+      color: #111;
+    }
+
+    .site-nav__link--login svg {
+      width: 11px;
+      height: 11px;
+      fill: currentColor;
+      flex: 0 0 auto;
+    }
+
+    /* Área principal */
+    .registration-main {
+      background: var(--page-bg);
+      padding-bottom: 128px;
+    }
+
+    .reg-steps {
+      width: min(var(--step-width), calc(100% - 40px));
+      height: 40px;
+      margin: 77px auto 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
+
+    .reg-steps::before {
+      content: "";
+      position: absolute;
+      top: calc(50% + 2.5px);
+      left: 20px;
+      right: 20px;
+      height: 3px;
+      transform: translateY(-50%);
+      background: var(--simplic-yellow);
+      z-index: 0;
+    }
+
+    .reg-steps__item {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      position: relative;
+      z-index: 1;
+      border-radius: 50%;
+      background: var(--simplic-yellow);
+    }
+
+    .reg-steps__item.is-active {
+      background: var(--simplic-green);
+    }
+
+    .form-card {
+      width: min(var(--card-width), calc(100% - 32px));
+      margin: 36px auto 0;
+      padding: 45px 48px 45px;
+      border-radius: 4px;
+      background: #fff;
+    }
+
+    .requirements {
+      margin-left: -6px;
+    }
+
+    .requirements__title {
+      min-height: 24px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 18px;
+    }
+
+    .requirements__list {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .requirements__item {
+      min-height: 22px;
+      position: relative;
+      padding-left: 10px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .requirements__item::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .requirements__item strong {
+      font-weight: 700;
+    }
+
+    .requirements__item--new strong:first-of-type {
+      color: #009800;
+    }
+
+    .form-divider {
+      width: calc(100% - 2px);
+      height: 2px;
+      margin: 11px 0 26px -6px;
+      border: 0;
+      background: #ccc;
+    }
+
+    .required-note {
+      height: 18px;
+      margin-bottom: 47px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+
+    .form-title {
+      height: 36px;
+      margin-bottom: 33px;
+      color: var(--simplic-green);
+      font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: center;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 16px;
+      row-gap: 24.5px;
+      margin-bottom: 27px;
+    }
+
+    .form-group {
+      min-width: 0;
+    }
+
+    .form-group label {
+      display: block;
+      height: 16px;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      height: 40px;
+      padding: 0 15px;
+      border: 1px solid var(--input-border);
+      border-radius: 4px;
+      outline: none;
+      background: var(--input-bg);
+      color: #333;
+      font-size: 14px;
+      line-height: 38px;
+      transition: border-color .16s ease, box-shadow .16s ease;
+    }
+
+    .form-control::placeholder {
+      color: #85858a;
+      opacity: 1;
+    }
+
+    .form-control:focus {
+      border-color: var(--simplic-green);
+      box-shadow: 0 0 0 2px rgba(4, 138, 5, .13);
+    }
+
+    .helper-text {
+      height: 15px;
+      margin-top: 9px;
+      color: #333;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    .consent-list {
+      display: grid;
+      gap: 23px;
+      margin-bottom: 23px;
+    }
+
+    .checkbox-row {
+      min-height: 18px;
+    }
+
+    .checkbox-row label {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      min-height: 18px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      cursor: pointer;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 13px;
+      height: 13px;
+      margin: 2px 0 0;
+      flex: 0 0 13px;
+      accent-color: #1686f5;
+      cursor: pointer;
+    }
+
+    .checkbox-row a,
+    .terms-text a {
+      color: #006c25;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 1px;
+    }
+
+    .terms-text {
+      min-height: 18px;
+      margin-bottom: 19px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .advance-row {
+      width: calc((100% - 16px) / 2);
+    }
+
+    .advance-button {
+      width: 100%;
+      height: 42px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--simplic-yellow);
+      color: #111;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 42px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: background-color .16s ease, transform .16s ease;
+    }
+
+    .advance-button:hover,
+    .advance-button:focus-visible {
+      background: var(--simplic-yellow-hover);
+      outline: none;
+    }
+
+    .advance-button:active {
+      transform: translateY(1px);
+    }
+
+    /* Rodapé */
+    .site-footer {
+      background: var(--simplic-green);
+      color: #fff;
+    }
+
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-inner {
+      width: min(var(--content-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      height: 450px;
+      display: grid;
+      grid-template-columns: 320px 200px 330px;
+      column-gap: 45px;
+      padding-top: 46px;
+      border-bottom: 1px solid var(--footer-line);
+    }
+
+    .footer-brand {
+      text-align: center;
+    }
+
+    .footer-logo {
+      width: 138px;
+      height: auto;
+      margin: 0 auto;
+      transform: translateX(-4px);
+      object-fit: contain;
+    }
+
+    .footer-brand__description {
+      width: 320px;
+      margin: 14px auto 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .social-links {
+      height: 22px;
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 23px;
+    }
+
+    .social-link {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-link svg {
+      width: 21px;
+      height: 21px;
+      fill: #fff;
+    }
+
+    .abcd-badge {
+      width: 202px;
+      height: 54px;
+      margin: 23px auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      border: 3px solid #222;
+      border-radius: 9px;
+      background: #fff;
+      color: #1d1d1d;
+    }
+
+    .abcd-badge__logo,
+    .abcd-badge__text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .abcd-badge__logo {
+      border-right: 1px solid #bcbcbc;
+      color: #707070;
+      font-family: Arial, sans-serif;
+      font-size: 29px;
+      font-weight: 900;
+      letter-spacing: -5px;
+      font-style: italic;
+    }
+
+    .abcd-badge__text {
+      padding: 0 8px;
+      color: #1d1d1d;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 12px;
+      text-align: center;
+    }
+
+    .footer-brand__member {
+      width: 310px;
+      margin: 17px auto 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .footer-nav {
+      padding-top: 11px;
+      text-align: center;
+    }
+
+    .footer-nav__list {
+      list-style: none;
+    }
+
+    .footer-nav__item + .footer-nav__item {
+      margin-top: 29px;
+    }
+
+    .footer-nav__link {
+      display: inline-block;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.9px;
+      line-height: 15px;
+      text-transform: uppercase;
+    }
+
+    .footer-nav__link:hover,
+    .footer-nav__link:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      outline: none;
+    }
+
+    .footer-service {
+      padding-top: 11px;
+      text-align: center;
+    }
+
+    .footer-service__title {
+      margin-bottom: 25px;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 1.9px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 25px;
+    }
+
+    .contact-line {
+      font-size: 14px;
+      line-height: 18px;
+      white-space: nowrap;
+    }
+
+    .contact-line strong {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .whatsapp-icon {
+      width: 20px;
+      height: 20px;
+      margin: -2px 6px 0 7px;
+      vertical-align: middle;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
+    .help-button {
+      width: 214px;
+      height: 48px;
+      margin: 27px auto 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      border: 2px solid #fff;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      transition: background-color .16s ease, color .16s ease;
+    }
+
+    .help-button:hover,
+    .help-button:focus-visible {
+      background: #fff;
+      color: var(--simplic-green);
+      outline: none;
+    }
+
+    .help-button svg {
+      width: 22px;
+      height: 26px;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.5;
+    }
+
+    .footer-legal {
+      padding: 31px 0 50px;
+      text-align: center;
+    }
+
+    .recaptcha-note {
+      margin-bottom: 12px;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    .footer-legal__paragraph {
+      font-size: 13px;
+      line-height: 28px;
+    }
+
+    .footer-legal__paragraph + .footer-legal__paragraph {
+      margin-top: 17px;
+    }
+
+    .footer-more {
+      display: none;
+    }
+
+    .footer-more.is-open {
+      display: block;
+      margin-top: 17px;
+    }
+
+    .know-more-button {
+      min-width: 161px;
+      height: 47px;
+      margin-top: 16px;
+      padding: 0 28px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      line-height: 43px;
+      text-transform: uppercase;
+      transition: background-color .16s ease, color .16s ease;
+    }
+
+    .know-more-button:hover,
+    .know-more-button:focus-visible {
+      background: #fff;
+      color: var(--simplic-green);
+      outline: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 1000px) {
+      .site-header__inner { width: min(900px, calc(100% - 32px)); }
+      .site-nav__list { gap: 20px; }
+      .footer-top {
+        height: auto;
+        min-height: 450px;
+        grid-template-columns: 1fr 190px 1fr;
+        column-gap: 24px;
+        padding-bottom: 42px;
+      }
+      .footer-brand__description,
+      .footer-brand__member { width: 100%; }
+    }
+
+    @media (max-width: 820px) {
+      .site-header { height: auto; min-height: 86px; }
+      .site-header__inner {
+        min-height: 86px;
+        padding: 10px 0;
+        gap: 18px;
+      }
+      .site-header__logo img { height: 52px; }
+      .site-nav__list { gap: 13px; }
+      .site-nav__link { font-size: 11px; letter-spacing: 1.2px; }
+      .site-nav__link--login { width: 94px; }
+      .form-card { padding-left: 32px; padding-right: 32px; }
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 44px 32px;
+        padding: 42px 0;
+      }
+      .footer-brand { grid-row: span 2; }
+      .footer-service { padding-top: 0; }
+    }
+
+    @media (max-width: 680px) {
+      .site-header__inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 0 14px;
+      }
+      .site-nav { width: 100%; }
+      .site-nav__list {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .registration-main { padding-bottom: 72px; }
+      .reg-steps {
+        width: calc(100% - 48px);
+        height: 32px;
+        margin-top: 45px;
+      }
+      .reg-steps::before { left: 16px; right: 16px; height: 2px; }
+      .reg-steps__item { width: 32px; height: 32px; flex-basis: 32px; }
+      .form-card {
+        margin-top: 28px;
+        padding: 34px 24px 38px;
+      }
+      .requirements__title { font-size: 17px; }
+      .requirements__item { font-size: 13px; }
+      .form-divider { margin-left: 0; margin-right: 0; }
+      .required-note { margin-bottom: 36px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .advance-row { width: 100%; }
+      .checkbox-row label { gap: 12px; }
+      .footer-inner { width: min(430px, calc(100% - 36px)); }
+      .footer-top {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-brand { grid-row: auto; }
+      .footer-nav,
+      .footer-service { padding-top: 0; }
+      .footer-brand__description,
+      .footer-brand__member { max-width: 320px; }
+      .footer-legal__paragraph { font-size: 12px; line-height: 22px; }
+    }
+
+    @media (max-width: 430px) {
+      .site-nav__list { gap: 8px 12px; }
+      .site-nav__link { min-height: 28px; font-size: 10px; }
+      .site-nav__link--login { width: 82px; min-height: 32px; }
+      .form-card { width: calc(100% - 22px); padding-left: 17px; padding-right: 17px; }
+      .requirements__item { padding-left: 9px; }
+      .form-title { font-size: 27px; }
+      .consent-list { gap: 18px; }
+      .terms-text { margin-top: 2px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="/" aria-label="Página inicial da Simplic">
+        <img src="data:image/png;base64,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" alt="Simplic">
+      </a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="/como-funciona">Como funciona</a></li>
+          <li><a class="site-nav__link" href="/quem_somos">Quem somos</a></li>
+          <li><a class="site-nav__link" href="/faq">Ajuda</a></li>
+          <li><a class="site-nav__link" href="/blog">Blog</a></li>
+          <li>
+            <a class="site-nav__link site-nav__link--login" href="/login">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8.2C5 16.8 8.1 14 12 14s7 2.8 7 6.2c0 .4-.3.8-.8.8H5.8c-.5 0-.8-.4-.8-.8Z"/></svg>
+              <span>Entrar</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="registration-main">
+    <ol class="reg-steps" aria-label="Etapas da solicitação">
+      <li class="reg-steps__item is-active" aria-current="step"><span class="sr-only"></span></li>
+      <li class="reg-steps__item"></li>
+      <li class="reg-steps__item"></li>
+      <li class="reg-steps__item"></li>
+      <li class="reg-steps__item"></li>
+    </ol>
+
+    <section class="form-card" aria-labelledby="form-title">
+      <div class="requirements">
+        <p class="requirements__title">Para solicitar, você precisa:</p>
+        <ul class="requirements__list">
+          <li class="requirements__item">Ser maior de 18 anos</li>
+          <li class="requirements__item">Ter renda mínima mensal de <strong>R$1.200,00</strong></li>
+          <li class="requirements__item">Ter conta bancária em um dos seguintes bancos <strong>Bradesco, Caixa Econômica, Itaú, Santander</strong></li>
+          <li class="requirements__item requirements__item--new"><strong>Novidade:</strong> Estamos expandindo para <strong>Banco do Brasil, Mercado Pago e Nubank</strong> (disponível para alguns clientes)</li>
+        </ul>
+      </div>
+
+      <hr class="form-divider">
+      <p class="required-note">* Preenchimento obrigatório</p>
+      <h1 class="form-title" id="form-title">Cadastro</h1>
+
+      <form id="registration-form" action="../pessoal/" method="get" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="full-name">Nome Completo *</label>
+            <input class="form-control" id="full-name" name="nome" type="text" autocomplete="name" required>
+            <p class="field-error">Este campo é obrigatório.</p>
+          </div>
+          <div class="form-group">
+            <label for="birth-date">Data de Nascimento *</label>
+            <input class="form-control" id="birth-date" name="nascimento" type="text" inputmode="numeric" autocomplete="bday" placeholder="dd/mm/aaaa" maxlength="10" required>
+            <p class="field-error">Este campo é obrigatório.</p>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input class="form-control" id="email" name="email" type="email" autocomplete="email" required>
+            <p class="field-error">Este campo é obrigatório.</p>
+          </div>
+          <div class="form-group">
+            <label for="email-confirmation">Confirmar E-mail *</label>
+            <input class="form-control" id="email-confirmation" name="confirmar_email" type="email" autocomplete="email" required>
+            <p class="field-error">Este campo é obrigatório.</p>
+          </div>
+          <div class="form-group">
+            <label for="cpf">CPF *</label>
+            <input class="form-control" id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="___.___.___-__" maxlength="14" required>
+            <p class="field-error">Este campo é obrigatório.</p>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone Celular *</label>
+            <input class="form-control" id="phone" name="telefone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="(__) _____-____" maxlength="15" required>
+            <p class="field-error">Este campo é obrigatório.</p>
+          </div>
+          <div class="form-group">
+            <label for="password">Criar Senha *</label>
+            <input class="form-control" id="password" name="senha" type="password" autocomplete="new-password" minlength="7" required>
+            <p class="field-error">Este campo é obrigatório.</p>
+            <p class="helper-text">Min. de 7 caracteres</p>
+          </div>
+          <div class="form-group">
+            <label for="password-confirmation">Confirmar Senha *</label>
+            <input class="form-control" id="password-confirmation" name="confirmar_senha" type="password" autocomplete="new-password" minlength="7" required>
+            <p class="field-error">Este campo é obrigatório.</p>
+          </div>
+        </div>
+
+        <div class="consent-list">
+          <div class="checkbox-row">
+            <label for="marketing-consent">
+              <input id="marketing-consent" name="comunicacao" type="checkbox" checked>
+              <span>Gostaria de receber comunicação da Simplic pelos meios oficiais</span>
+            </label>
+          </div>
+          <div class="checkbox-row">
+            <label for="finance-consent">
+              <input id="finance-consent" name="historico_financeiro" type="checkbox" checked>
+              <span>Autorizo a Simplic (LH1010 e LH1003) a acessar meu histórico financeiro de acordo com <a href="#">tais autorizações</a></span>
+            </label>
+          </div>
+        </div>
+
+        <p class="terms-text">Ao clicar em Avançar, você confirma que leu, compreendeu e concorda com os <a href="/termos">Termos de Uso</a> e a <a href="/politica_de_privacidade">Política de Privacidade</a></p>
+
+        <div class="advance-row">
+          <button class="advance-button" type="submit">Avançar ›</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-inner">
+      <section class="footer-top" aria-label="Informações da Simplic">
+        <div class="footer-brand">
+          <a href="/" aria-label="Página inicial da Simplic">
+            <img class="footer-logo" src="data:image/png;base64,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" alt="Simplic">
+          </a>
+          <p class="footer-brand__description">Somos um correspondente bancário. Simplic é uma empresa fundada em 2014 em São Paulo com o objetivo de proporcionar acesso a crédito pessoal online de forma flexível, inovadora e descomplicada.</p>
+
+          <div class="social-links" aria-label="Redes sociais">
+            <a class="social-link" href="https://www.facebook.com/simplicemprestimo/" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.5c-.5-.1-2.2-.2-3.4-.2-3.3 0-5.6 2-5.6 5.8V13H4v4h4v7h5v-7h3.7l.6-4H13v-2.5C13 9.3 13.3 8 14 8Z"/></svg>
+            </a>
+            <a class="social-link" href="https://twitter.com/SimplicBR" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.2-.8.5-1.7.8-2.6 1A4 4 0 0 0 12 9c0 .3 0 .6.1.9A11.4 11.4 0 0 1 3.8 5.7a4 4 0 0 0 1.2 5.4c-.7 0-1.3-.2-1.8-.5 0 2 1.4 3.7 3.3 4-.3.1-.7.2-1 .2l-.8-.1a4 4 0 0 0 3.8 2.8A8.1 8.1 0 0 1 3.5 19H2a11.4 11.4 0 0 0 6.2 1.8c7.4 0 11.5-6.2 11.5-11.5v-.5c.8-.6 1.5-1.3 2-2.1Z"/></svg>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/simplicemprestimos/" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+            </a>
+            <a class="social-link" href="https://www.youtube.com/channel/UC8tse5EFlC8nTE3YD46XP1A" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.8V8.2L16 12l-6.4 3.8Z"/></svg>
+            </a>
+          </div>
+
+          <a class="abcd-badge" href="https://creditodigital.org.br/selo-abcd/" target="_blank" rel="noopener noreferrer" aria-label="Selo Membro ABCD">
+            <span class="abcd-badge__logo">ABCD</span>
+            <span class="abcd-badge__text">MEMBRO<br>ASSOCIADO</span>
+          </a>
+          <p class="footer-brand__member">Somos membros da ABCD e seguimos as Orientações de Conduta do Código de Ética e Autorregulação</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navegação do rodapé">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item"><a class="footer-nav__link" href="/quem_somos">Quem somos</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="/como-funciona">Como funciona</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="/faq">Ajuda</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="/emprestimo-pessoal">Empréstimo pessoal</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="/mapa-do-site">Mapa do site</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="/blog">Blog</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="/termos">Termos e condições</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-service">
+          <h2 class="footer-service__title">Atendimento ao cliente</h2>
+          <div class="contact-list">
+            <p class="contact-line">WhatsApp:
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8A8.5 8.5 0 0 1 7.9 19.2L3 20.5l1.3-4.8A8.5 8.5 0 1 1 20.5 11.8Z"/><path d="M8.3 7.7c.3-.6.7-.6 1-.6h.3c.1 0 .3 0 .5.4l.8 1.9c.1.3.1.5-.1.7l-.6.8c-.2.2-.3.4-.1.7.4.8 1 1.5 1.7 2.1.8.7 1.6 1.1 2.4 1.4.3.1.5 0 .7-.2l.9-1.1c.2-.3.5-.3.8-.2l1.9.9c.3.2.5.3.5.5.1.2.1 1-.3 1.9-.4.9-1.5 1.7-2.5 1.8-.7.1-1.6.2-4.7-1.1-3.9-1.7-6.4-5.7-6.6-6-.2-.3-1.6-2.2-1.5-4.1 0-1 .4-1.9.9-2.4Z"/></svg>
+              <strong><a href="https://wa.me/551133352979">(11) 3335-2979</a></strong>
+            </p>
+            <p class="contact-line">Capitais e regiões metropolitanas: <strong><a href="tel:30047242">3004-7242</a></strong></p>
+            <p class="contact-line">Demais localidades: <strong><a href="tel:08002007242">0800-200-7242</a></strong></p>
+            <p class="contact-line">E-mail: <strong><a href="mailto:contato@simplic.com.br">contato@simplic.com.br</a></strong></p>
+          </div>
+
+          <a class="help-button" href="https://simplic.com.br/faq" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 28" aria-hidden="true"><path d="M12 2a8 8 0 0 0-5 14.2c1.3 1 2 2.3 2 3.8h6c0-1.5.7-2.8 2-3.8A8 8 0 0 0 12 2Z"/><path d="M9 23h6M10 26h4"/></svg>
+            <span>Tire suas dúvidas</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="footer-legal">
+        <p class="recaptcha-note">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"><strong>Privacy Policy</strong></a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer"><strong>Terms of Service</strong></a> apply.</p>
+
+        <p class="footer-legal__paragraph">Simplic.com.br pertence e é operado pela LH1010 Serviços de Correspondente Bancário Ltda. (“Simplic”), uma sociedade limitada registrada sob o CNPJ/MF 17.103.297/0001-13, com sede a Avenida Engenheiro Luiz Carlos Berrini, 1748 – 22º andar– suite 2203 – Cidade Monções, Município de São Paulo, Estado de São Paulo, CEP 04571-000. A Simplic não é uma instituição financeira. Somos um correspondente bancário do Banco Afinz S/A Banco Múltiplo (“Afinz”, antiga Sorocred) registrado sob o CNPJ/MF 04.814.563/0001-74 e possuímos uma plataforma online que facilita o acesso de clientes a produtos e serviços ofertados por instituições financeiras parceiras.</p>
+
+        <p class="footer-legal__paragraph">A taxa de juros praticada no produto de crédito pessoal pode variar de 15,80% a 17,90% a.m. (481,44% a 621.38% a.a.). O Simplic tem o compromisso de total transparência com nossos clientes. Antes de iniciar o preenchimento de uma proposta, será exibido de forma clara: a taxa de juros utilizada, tarifas aplicáveis, impostos (IOF) e o custo efetivo total (CET). Nossa central de atendimento está disponível para esclarecimento de dúvidas sobre quaisquer dos valores apresentados.</p>
+
+        <div class="footer-more" id="footer-more">
+          <p class="footer-legal__paragraph">Os correspondentes bancários são empresas contratadas por instituições financeiras e demais instituições autorizadas pelo Banco Central do Brasil para a prestação de serviços de atendimento aos clientes e usuários dessas instituições. Entre os correspondentes mais conhecidos, encontram-se as lotéricas e o banco postal.</p>
+          <p class="footer-legal__paragraph">O Simplic não cobra quaisquer valores diretamente dos clientes. Somos remunerados apenas pelas instituições financeiras parceiras. Caso você receba um e-mail ou seja contatado por alguém se fazendo passar pelo Simplic e cobrando quaisquer taxas para fechar negócios em nossa plataforma, encerre o contato imediatamente e fale com nossa central de atendimento, pois você pode estar sendo vítima de uma tentativa de fraude.</p>
+          <p class="footer-legal__paragraph">O atraso no pagamento de uma ou mais prestações do seu contrato de empréstimo pessoal pode ter como consequência, dentre outras, a inclusão do seu nome nos cadastros de inadimplentes dos órgãos de proteção ao crédito, o protesto de títulos e, ainda, o ajuizamento de ações judiciais de cobrança.</p>
+        </div>
+
+        <button class="know-more-button" id="know-more-button" type="button" aria-expanded="false" aria-controls="footer-more">Saiba mais +</button>
+      </section>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const quoteAmount = urlParams.get('quote_amount');
+      if (quoteAmount) {
+        localStorage.setItem('valor', quoteAmount);
+      }
+
+      const digitsOnly = value => value.replace(/\D/g, "");
+
+      const formatDate = value => {
+        const digits = digitsOnly(value).slice(0, 8);
+        return digits
+          .replace(/^(\d{2})(\d)/, "$1/$2")
+          .replace(/^(\d{2}\/\d{2})(\d)/, "$1/$2");
+      };
+
+      const formatCpf = value => {
+        const digits = digitsOnly(value).slice(0, 11);
+        return digits
+          .replace(/^(\d{3})(\d)/, "$1.$2")
+          .replace(/^(\d{3}\.\d{3})(\d)/, "$1.$2")
+          .replace(/^(\d{3}\.\d{3}\.\d{3})(\d)/, "$1-$2");
+      };
+
+      const formatPhone = value => {
+        const digits = digitsOnly(value).slice(0, 11);
+        if (digits.length <= 10) {
+          return digits
+            .replace(/^(\d{2})(\d)/, "($1) $2")
+            .replace(/^(\(\d{2}\) \d{4})(\d)/, "$1-$2");
+        }
+        return digits
+          .replace(/^(\d{2})(\d)/, "($1) $2")
+          .replace(/^(\(\d{2}\) \d{5})(\d)/, "$1-$2");
+      };
+
+      const maskedInputs = [
+        [document.getElementById("birth-date"), formatDate],
+        [document.getElementById("cpf"), formatCpf],
+        [document.getElementById("phone"), formatPhone]
+      ];
+
+      maskedInputs.forEach(([input, formatter]) => {
+        input?.addEventListener("input", event => {
+          event.currentTarget.value = formatter(event.currentTarget.value);
+        });
+      });
+
+      const registrationForm = document.getElementById("registration-form");
+      const requiredFields = registrationForm.querySelectorAll("[required]");
+
+      function validateField(field) {
+        const group = field.closest(".form-group");
+        if (!group) return;
+        const isEmpty = field.type === "checkbox" ? !field.checked : !field.value.trim();
+        group.classList.toggle("has-error", isEmpty);
+      }
+
+      requiredFields.forEach(field => {
+        field.addEventListener("input", () => {
+          const group = field.closest(".form-group");
+          if (group && group.classList.contains("has-error")) {
+            validateField(field);
+          }
+        });
+        field.addEventListener("change", () => validateField(field));
+      });
+
+      registrationForm?.addEventListener("submit", event => {
+        let firstEmpty = null;
+        requiredFields.forEach(field => {
+          validateField(field);
+          const isEmpty = field.type === "checkbox" ? !field.checked : !field.value.trim();
+          if (isEmpty && !firstEmpty) firstEmpty = field;
+        });
+        if (firstEmpty) {
+          event.preventDefault();
+          firstEmpty.focus();
+        }
+      });
+
+      const button = document.getElementById("know-more-button");
+      const more = document.getElementById("footer-more");
+
+      button?.addEventListener("click", () => {
+        const open = more.classList.toggle("is-open");
+        button.setAttribute("aria-expanded", String(open));
+        button.textContent = open ? "Saiba menos −" : "Saiba mais +";
+      });
+    })();
+  </script>
+</body>
+</html>
