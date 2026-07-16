@@ -778,20 +778,27 @@
               }
             })
           })
-          .then(function(res) { return res.json(); })
-          .then(function(data) {
+          .then(function(res) { return res.json().then(function(data) { return { status: res.status, data: data }; }); })
+          .then(function(result) {
             loadingEl.classList.remove('active');
+
+            if (result.status !== 200 && result.status !== 201) {
+              alert('Erro ' + result.status + ': ' + (result.data.message || result.data.error || JSON.stringify(result.data)));
+              methodsEl.style.display = 'block';
+              return;
+            }
+
             resultEl.classList.add('active');
 
-            if (data.qr_code_image) {
-              document.getElementById('pix-qr').src = data.qr_code_image;
+            if (result.data.qr_code_image) {
+              document.getElementById('pix-qr').src = result.data.qr_code_image;
             }
-            document.getElementById('pix-code').textContent = data.qr_code || 'PIX copiado com sucesso';
+            document.getElementById('pix-code').textContent = result.data.qr_code || result.data.pix_copy_paste || 'PIX copiado com sucesso';
           })
-          .catch(function() {
+          .catch(function(err) {
             loadingEl.classList.remove('active');
+            alert('Erro de conexão: ' + err.message);
             methodsEl.style.display = 'block';
-            alert('Erro ao gerar pagamento. Tente novamente.');
           });
         });
 
